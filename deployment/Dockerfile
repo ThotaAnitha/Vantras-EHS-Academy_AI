@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY . .
+ENV VANTRAS_HOST=0.0.0.0 VANTRAS_NO_BROWSER=1
+EXPOSE 8173
+CMD ["python", "app.py"]
